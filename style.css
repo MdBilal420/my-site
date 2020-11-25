@@ -53,15 +53,12 @@ hr {
 /** container **/
 .container {
     padding: 0rem 1rem;
-   
 }
 
 .container-center {
     max-width: 800px;
     margin: auto;
 }
-
-
 
 /** links **/
 .link {
@@ -190,7 +187,7 @@ hr {
 .code-area{
     margin-top: 1rem;
     margin-bottom: 1rem;
-    max-width: 600px;
+    max-width: 800px;
     padding: 1rem;
     background-color: var(--off-white);
 }
