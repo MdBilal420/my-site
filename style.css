@@ -128,13 +128,13 @@ hr {
 }
 
 .hero .hero-img {
-    max-width: 350px;
+    max-width: 280px;
     display: block;
     margin: auto;
 }
 
-.hero .quiz-img {
-    max-width: 350px;
+.quiz-img {
+    max-width: 280px;
     display: block;
     /* margin: auto; */
     margin-left: 0%;
@@ -143,7 +143,7 @@ hr {
 }
 
 .hero .tech-img {
-    max-width: 350px;
+    max-width: 280px;
     display: block;
     margin: auto;
 }
@@ -226,30 +226,7 @@ padding-left: 1.3rem;
 }
 
 
-/* * blogs*/
 
-.blogs {
-    margin: auto;
-    max-width: 90%;
-    text-align: center;
-    margin-bottom: 6rem;
-}
-
-.blogs h2 {
-    margin: 1.5rem;
-}
-
-.blog p {
-    line-height: 1.5rem;
-    /* margin-bottom: 2rem; */
-    
-}
-
-.blogs a {
-    display: inline-block;
-  
-  margin-top: 1.5rem;
-}
 
 
 /* * footer  */
