@@ -96,7 +96,7 @@
                 <blockquote style="font-weight: bold;">Print Questions and Options on screen and take input as answer</blockquote>
                
                   <div class="code-area">
-                    <p><code>var i = 0;i<<span>questions</span>.length;i++)</code></p>
+                    <p><code>var i = 0;i<span>questions</span>.length;i++)</code></p>
                  
                     <p><code>{</code></p> 
                         <div style="padding-left: 1.3rem;">
@@ -110,13 +110,13 @@
                             <p><code>// Input Answer</code></p>
                             <p><code>var answer = readlineSync.question('Answer: ');</code></p>
                             <p><code> //compare answers</code></p>
-                            <p><code>if(answer.toLowerCase() === questions[i].answer.toLowerCase())</code></p>
+                            <p><code>if(anwer.toLowerCase() === qustins[i].answer.toLowerCase())</code></p>
                             <p><code>{//on each correct answer print 'correct' and add 3 to 'score'</code></p>
-                            <p><code>console.log(chalk.bgGreen('Correct'));</code></p>
+                            <p><code>console.log(chalk.bgGreen(' Correct'));</code></p>
                             <p><code>score = score + 3;}</code></p>
                             <p><code>//on incorrect answer print 'incorrect' and subtract -1</code></p>
                             <p><code>else{</code></p>
-                            <p><code>console.log(chalk.bgRed('Incorrect'));</code></p>
+                            <p><code>console.log(chalk.bgRed(' Incorrect'));</code></p>
                             <p> <code>score = score -1; }</code></p>
                        </div>        
                  </div>  
@@ -127,9 +127,11 @@
                 <div class="code-area">
                     <p><code>if(score > best){</code></p>
                     <p><code>//congratulate if score is greater than best</code></p>
-                    <div>
-                    <p><code>console.log(chalk.yellow('Congratulations ! This is the best score \n')</code></p>
                 </div>
+                <div class="code-area">
+                    <p><code>console.log(chalk.yellow( 'Congratulations !This is the best score \n')</code></p>
+                </div>
+                <div class="code-area">
                     <p><code>// update best score</code></p>
                     <p><code>best = score</code></p>
                     <p><code>}</code></p>
