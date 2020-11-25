@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>blogs | bilal</title>
+        <link href="style.css" rel="stylesheet" />
+        <link href='https://fonts.googleapis.com/css?family=Cedarville Cursive' rel='stylesheet'>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    </head>
+<body>
+    <nav class="navigation container">
+        <div class="nav-brand" style="font-family: 'Cedarville Cursive'; font-size: 30px;"> < Web Dev /> </div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/">home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/projects.html">projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/blogs.html">blogs</a>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <div class="container container-center">
+                <h1 class="hero-heading" style="font-size: 50px;font-weight: bold;"> A Quiz app on javascript CLI </h1>
+                <small style="font-weight: bold;">November 25, 2020</small>
+                <img class='quiz-img' src="media/quiz.svg" />
+            </div>
+        
+            <div class="container container-center blog">
+                <blockquote>
+                    In this blog, we will learn how to create a Command Line Application on repl.it . We will be creating a quiz app on a famous tv show <i>‘SUITS’</i>.
+                </blockquote>
+
+                <p style="margin-top: 1rem;">
+                    Two dependancies that we will be using are:
+                </p>
+                <ol style="margin-top: 1rem;">
+                    <li><span style="font-weight: bold;"> readlineSync : </span>readlineSync tries to let your script have a conversation with the user via a console.</li>
+                    <li><span style="font-weight: bold;">chalk: </span>chalk is used for terminal string styling.</li>
+                </ol>
+                <p class="code-area">
+                <code>var readlineSync = require('readline-sync');</code>
+                </p>
+                <p  class="code-area"><code>const chalk = require('chalk');</code>
+                </p>
+                    <p>Using above line of code, repl.it will automatically add those dependancies on to package.json file.</p>
+                <p class="code-area"><code>"dependencies": {"chalk": "^4.1.0","readline-sync": "^1.4.10"}</code></p>
+                <p>Now, we can begin to write our quiz app.</p>
+                <blockquote style="font-weight: bold;margin-top: 1rem;">Take the Player name as input.</blockquote>
+                <p class="code-area"><code>var username = readlineSync.question('Enter Your Name: ');</code></p>
+                <blockquote style="font-weight: bold;"> Instructions</blockquote>
+                <div class="code-area">
+                    <p><code>console.log(chalk.red('Suits Quiz'));</code></p>
+                    <p><code>console.log(chalk.green('A quiz from our favourite tv show'));</code></p>
+                    <p><code>console.log(chalk.yellow('Write the correct answer.'));</code></p>
+                    <p><code>console.log('Points:  Correct: +3   Incorrect: -1');</code></p>
+                </div>
+                <blockquote style="font-weight: bold;"> Add Questions to the javascript object.</blockquote>
+                <div class="code-area">
+                    <p><code>var questions = [</code></p>   
+                    <p> <code>{question: `Who is the female shark in charge of the 'Suits' law   firm?`,
+                    A: 'Rachel Zane', B:   'Jessica Pearson', C:'Donna Paulsen',
+                    answer: 'b'},</code></p>
+                    <p><code>   {question: `Who lands an interview with Harvey Specter after he runs from a drug deal gone bad?`,
+                    A: 'Jeff Malone', B:   'Sean Cahill', C:'Mike Ross',
+                    answer: 'c'},</code> </p>
+                    <p><code>   {question: `The firm hires law graduates from ________?`,A: 'Harvard', B:'Stanford', C:'Oxford',
+                    answer: 'a'}, </code></p>
+                    <p><code>   {question: `How does Louis figure out that Mike didn't attend Harvard?`,
+                    A: 'Knight of Columbus', B:   'Key Largo', C:'Order of the Coif key',
+                    answer: 'c'}, </code></p>
+                    <p><code>  {question: `What law exam did Mike charge to take for others?`,
+                    A: 'SAT', B:   'LSAT', C:'ACT',
+                    answer: 'b'},
+                     </code></p>
+                     <p><code>];</code></p>
+                </div>
+                <p>
+                    Here, we are giving 3 options for each question. We can take any questions according to our preference and provide options to A,B and C respectively.
+                </p>
+                <p style="margin-top: 1rem;">We will make use of two variables.</p>
+                <div class="code-area">
+                    <p><code>var score = 0;</code></p>
+                    <p><code>var best = 5;</code></p>
+                </div>
+               
+                <p style="margin-bottom: 1rem;">Now, we need to log these questions and options on console. For that we will make use of a <span style="font-weight: bold;">for</span> loop.</p>
+               
+                <blockquote style="font-weight: bold;">Print Questions and Options on screen and take input as answer</blockquote>
+               
+                  <div class="code-area">
+                    <p><code>var i = 0;i<<span>questions</span>.length;i++)</code></p>
+                 
+                    <p><code>{</code></p> 
+                        <div style="padding-left: 1.3rem;">
+                            <p><code>var n = i+1;</code></p>
+                            <P><code>//question</code></p>
+                            <p><code>console.log(chalk.inverse(n+'. '+questions[i].question));</code></p>
+                            <p><code>   //options</code></p>
+                            <p><code>   console.log(chalk.cyan('A: '+questions[i].A));</code></p>
+                            <p><code>console.log(chalk.cyan('B: '+questions[i].B));</code></p>
+                            <p><code>console.log(chalk.cyan('C: '+questions[i].C));</code></p>
+                            <p><code>// Input Answer</code></p>
+                            <p><code>var answer = readlineSync.question('Answer: ');</code></p>
+                            <p><code> //compare answers</code></p>
+                            <p><code>if(answer.toLowerCase() === questions[i].answer.toLowerCase()){//on each correct answer print 'correct' and add 3 to 'score'</code></p>
+                            <p><code>console.log(chalk.bgGreen('Correct'));</code></p>
+                            <p><code>score = score + 3;}</code></p>
+                            <p><code>//on incorrect answer print 'incorrect' and subtract -1</code></p>
+                            <p><code>else{</code></p>
+                            <p><code>console.log(chalk.bgRed('Incorrect'));</code></p>
+                            <p> <code>score = score -1; }</code></p>
+                       </div>        
+                 </div>  
+            
+                <blockquote style="font-weight: bold;">Compare if current score is greater than best score.</blockquote>
+                
+                
+                <div class="code-area">
+                    <p><code>if(score > best){</code></p>
+                    <p><code>//congratulate if score is greater than best</code></p>
+                    <p><code>console.log(chalk.yellow('Congratulations ! This is the best score \n')</code></p>
+                    <p><code>// update best score</code></p>
+                    <p><code>best = score</code></p>
+                    <p><code>}</code></p>
+                </div>
+                <blockquote style="font-weight: bold;">Print final Score</blockquote>
+                <div class="code-area">
+                    <p><code>console.log(chalk.red(username +' your final score is: '+ score));</code></p>
+                </div>
+                <p>Now, our app is complete.</p>
+                <p>Take the quiz on :</p><br />
+                <a class="link link-primary" href="https://repl.it/@MdBilal420/Quiz-cli?embed=1&output=1#index.js">Live Project</a>
+                <a class="link link-secondary" href="https://github.com/MdBilal420/NeogCamp-Task/blob/master/week-1-task-2.js">View Source</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-header">connect with me on:</div>
+        <br />
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/MdBilal420">
+                
+                    <i class="fa fa-github fa-2x"></i>
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/mdbilal420">
+                    <i class="fa fa-twitter fa-2x"></i>
+                </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://www.linkedin.com/in/mohammad-bilal-b026ab160/">
+                    <i class="fa fa-linkedin fa-2x"></i>
+                </a>
+            </li>
+            
+    
+    </ul>
+    </footer>
+
+</body>
+
+</html>

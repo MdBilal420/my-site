@@ -37,7 +37,7 @@ hr {
   }
   
   /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-  @media screen and (max-width:600px) {
+  @media screen and (max-width:800px) {
     .column {
       width: 100%;
     }
@@ -133,6 +133,15 @@ hr {
     margin: auto;
 }
 
+.hero .quiz-img {
+    max-width: 350px;
+    display: block;
+    /* margin: auto; */
+    margin-left: 0%;
+    padding-top: 1.5rem;
+    
+}
+
 .hero .tech-img {
     max-width: 350px;
     display: block;
@@ -175,6 +184,20 @@ hr {
 
 } */
 
+.code-area{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    max-width: 600px;
+    padding: 1rem;
+    background-color: var(--off-white);
+}
+
+blockquote{
+border-left: 8px solid var(--primary-color);
+padding-left: 1.3rem;
+
+}
+
 .ow {
     background-color: var(--off-white);
 }
@@ -201,3 +224,33 @@ hr {
 .footer ul {
     padding-inline-start: 0px;
 }
+
+
+/* * blogs*/
+
+.blogs {
+    margin: auto;
+    max-width: 90%;
+    text-align: center;
+    margin-bottom: 6rem;
+}
+
+.blogs h2 {
+    margin: 1.5rem;
+}
+
+.blog p {
+    line-height: 1.5rem;
+    /* margin-bottom: 2rem; */
+    
+}
+
+.blogs a {
+    display: inline-block;
+  
+  margin-top: 1.5rem;
+}
+
+
+/* * footer  */
+
