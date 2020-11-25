@@ -103,14 +103,15 @@
                             <p><code>var n = i+1;</code></p>
                             <P><code>//question</code></p>
                             <p><code>console.log(chalk.inverse(n+'. '+questions[i].question));</code></p>
-                            <p><code>   //options</code></p>
-                            <p><code>   console.log(chalk.cyan('A: '+questions[i].A));</code></p>
+                            <p><code>//options</code></p>
+                            <p><code>console.log(chalk.cyan('A: '+questions[i].A));</code></p>
                             <p><code>console.log(chalk.cyan('B: '+questions[i].B));</code></p>
                             <p><code>console.log(chalk.cyan('C: '+questions[i].C));</code></p>
                             <p><code>// Input Answer</code></p>
                             <p><code>var answer = readlineSync.question('Answer: ');</code></p>
                             <p><code> //compare answers</code></p>
-                            <p><code>if(answer.toLowerCase() === questions[i].answer.toLowerCase()){//on each correct answer print 'correct' and add 3 to 'score'</code></p>
+                            <p><code>if(answer.toLowerCase() === questions[i].answer.toLowerCase())</code></p>
+                            <p><code>{//on each correct answer print 'correct' and add 3 to 'score'</code></p>
                             <p><code>console.log(chalk.bgGreen('Correct'));</code></p>
                             <p><code>score = score + 3;}</code></p>
                             <p><code>//on incorrect answer print 'incorrect' and subtract -1</code></p>
@@ -126,6 +127,7 @@
                 <div class="code-area">
                     <p><code>if(score > best){</code></p>
                     <p><code>//congratulate if score is greater than best</code></p>
+                    <div>
                     <p><code>console.log(chalk.yellow('Congratulations ! This is the best score \n')</code></p>
                     <p><code>// update best score</code></p>
                     <p><code>best = score</code></p>
