@@ -11,7 +11,7 @@
     </head>
 <body>
     <nav class="navigation container">
-        <div class="nav-brand" style="font-family: 'Cedarville Cursive'; font-size: 30px;">  Web Dev /> </div>
+        <div class="nav-brand" style="font-family: 'Cedarville Cursive'; font-size: 30px;"> < Web Dev /> </div>
         <ul class="list-non-bullet nav-pills">
             <li class="list-item-inline">
                 <a class="link link-active" href="/">home</a>
@@ -96,15 +96,10 @@
                 <blockquote style="font-weight: bold;">Print Questions and Options on screen and take input as answer</blockquote>
                
                   <div class="code-area">
-<<<<<<< HEAD
-                    <p><code>for(var i=0; i<questions.length;i++)</code></p>
-=======
-                    <p><code>var i = 0;i<<span>questions</span>.length;i++)</code></p>
->>>>>>> parent of 149e903... update: blog page responsive
-                 
+                    <p><code>var i = 0;i = questions.length;i++)</code></p>
                     <p><code>{</code></p> 
                         <div style="padding-left: 1.3rem;">
-                            <p><code>for(var n = i+1;i< questions.length;i++</code></p>
+                            <p><code>{</code></p>
                             <P><code>//question</code></p>
                             <p><code>console.log(chalk.inverse(n+'. '+questions[i].question));</code></p>
                             <p><code>//options</code></p>
@@ -114,13 +109,13 @@
                             <p><code>// Input Answer</code></p>
                             <p><code>var answer = readlineSync.question('Answer: ');</code></p>
                             <p><code> //compare answers</code></p>
-                            <p><code>if(answer.toLowerCase() === questions[i].answer.toLowerCase())</code></p>
+                            <p><code>if(anser.toLowrCase() === questins[i].anwer.toLowerCase())</code></p>
                             <p><code>{//on each correct answer print 'correct' and add 3 to 'score'</code></p>
-                            <p><code>console.log(chalk.bgGreen('Correct'));</code></p>
+                            <p><code>console.log(chalk.bgGreen(' Correct'));</code></p>
                             <p><code>score = score + 3;}</code></p>
                             <p><code>//on incorrect answer print 'incorrect' and subtract -1</code></p>
                             <p><code>else{</code></p>
-                            <p><code>console.log(chalk.bgRed('Incorrect'));</code></p>
+                            <p><code>console.log(chalk.bgRed(' Incorrect'));</code></p>
                             <p> <code>score = score -1; }</code></p>
                        </div>        
                  </div>  
@@ -132,7 +127,7 @@
                     <p><code>if(score > best){</code></p>
                     <p><code>//congratulate if score is greater than best</code></p>
                     <div>
-                    <p><code>console.log(chalk.yellow('Congratulations ! This is the best score \n')</code></p>
+                    <p><code>console.log(chalk.yellow(' Congratulations ! This is the best score \n')</code></p>
                 </div>
                     <p><code>// update best score</code></p>
                     <p><code>best = score</code></p>
