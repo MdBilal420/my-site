@@ -36,20 +36,16 @@ hr {
   clear: both;
 }
 
-/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 800px) {
   .column {
     width: 100%;
   }
 }
 
-/** spaces **/
-
 .margin-md {
   margin: 2rem;
 }
 
-/** container **/
 .container {
   padding: 0rem 1rem;
 }
@@ -59,7 +55,6 @@ hr {
   margin: auto;
 }
 
-/** links **/
 .link {
   box-sizing: border-box;
   text-decoration: none;
@@ -78,8 +73,6 @@ hr {
   border: 1px solid var(--primary-color);
 }
 
-/** lists **/
-
 .list-non-bullet {
   list-style: none;
 }
@@ -88,8 +81,6 @@ hr {
   display: inline;
   padding: 0rem 0.5rem;
 }
-
-/** navigation **/
 
 .navigation {
   background-color: var(--primary-color);
