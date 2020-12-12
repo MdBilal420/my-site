@@ -12,11 +12,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // if it's light -> go dark
         if(themeStylesheet.href.includes('light')){
             themeStylesheet.href = 'dark.css';
-            themeToggle.innerText = 'Light';
+            themeToggle.innerText = '☀️';
         } else {
             // if it's dark -> go light
             themeStylesheet.href = 'light.css';
-            themeToggle.innerText = 'Dark';
+            themeToggle.innerText = '🌙';
 
         }
 
